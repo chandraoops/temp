@@ -1,0 +1,199 @@
+<html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <title>Customer Detail</title>
+            <link rel="stylesheet" type="text/css" href="jsfcrud.css" />
+            <script src="data.js"></script>
+            <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+               <script>
+			    $( document ).ready(function() {
+			    	$('#detail').hide();
+			    	function loadData() {
+			    		for (var i = 0; i < customers.length; i++) { 
+					    		var row = $( "<tr class='jsfcrud_odd_row'></tr>");
+					    		row.append("<td>"+ customers[i].customerId +"</td>");							
+								row.append("<td> 95117</td>");							
+								row.append("<td> Jumbo Eagle Corp</td>");							
+								row.append("<td> 111 E. Las Olivas Blvd</td>");							
+								row.append("<td> Suite 51</td>");							
+								row.append("<td> Fort Lauderdale</td>");							
+								row.append("<td> FL</td>");							
+								row.append("<td> 305-555-0188</td>");							
+								row.append("<td> 305-555-0189</td>");							
+								row.append("<td> jumboeagle@example.com</td>");							
+								row.append("<td> 100000</td>");							
+								row.append("<td> N</td>");							
+								row.append("<td><a href='#' onclick='return false'>Show</a> <a href='#' onclick='return false'>Edit</a> <a href='#' onclick='return false'>Destroy</a></td>");							
+
+								$("#customer_list").append(row);
+							}	
+			    	}
+			    	loadData();
+			    });
+			 
+			    
+    </script>
+        </head>
+        <body>
+
+<div id="list">
+	  <h1>Listing Customer Items</h1>
+            
+<form id="j_id_id21" name="j_id_id21" method="post" action="" class="jsfcrud_list_form" enctype="application/x-www-form-urlencoded">
+Item 1..5 of 13
+                    &nbsp;
+                    &nbsp;
+                    
+
+<a href="#" onclick="return false">Next 5</a>&nbsp;
+                    <table border="0" cellpadding="2" cellspacing="0" rules="all" style="border:solid 1px">
+<thead>
+<tr>
+<th scope="col">CustomerId</th>
+<th scope="col">Zip</th>
+<th scope="col">Name</th>
+<th scope="col">Addressline1</th>
+<th scope="col">Addressline2</th>
+<th scope="col">City</th>
+<th scope="col">State</th>
+<th scope="col">Phone</th>
+<th scope="col">Fax</th>
+<th scope="col">Email</th>
+<th scope="col">CreditLimit</th>
+<th scope="col">DiscountCode</th>
+<th scope="col">&nbsp;</th>
+</tr>
+</thead>
+<tbody id="customer_list">
+
+</tbody>
+</table>
+                <br />
+                <a href="#" onclick="return false">New Customer</a>
+                <br />
+                <a href="#" onclick="return false">Index</a>
+</form>
+</body>
+
+</div>
+<div id="detail">
+
+
+		<h1>Customer Detail</h1>
+
+<form id="j_id_id21" name="j_id_id21" method="post" action="/JsfJpaCrud/faces/pages/customer/Detail.jsp" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_id_id21" value="j_id_id21" />
+<table>
+<tbody>
+<tr>
+<td>CustomerId:</td>
+<td><span title="CustomerId">1</span></td>
+</tr>
+<tr>
+<td>Zip:</td>
+<td><span title="Zip">95117</span></td>
+</tr>
+<tr>
+<td>Name:</td>
+<td><span title="Name">Jumbo Eagle Corp</span></td>
+</tr>
+<tr>
+<td>Addressline1:</td>
+<td><span title="Addressline1">111 E. Las Olivas Blvd</span></td>
+</tr>
+<tr>
+<td>Addressline2:</td>
+<td><span title="Addressline2">Suite 51</span></td>
+</tr>
+<tr>
+<td>City:</td>
+<td><span title="City">Fort Lauderdale</span></td>
+</tr>
+<tr>
+<td>State:</td>
+<td><span title="State">FL</span></td>
+</tr>
+<tr>
+<td>Phone:</td>
+<td><span title="Phone">305-555-0188</span></td>
+</tr>
+<tr>
+<td>Fax:</td>
+<td><span title="Fax">305-555-0189</span></td>
+</tr>
+<tr>
+<td>Email:</td>
+<td><span title="Email">jumboeagle@example.com</span></td>
+</tr>
+<tr>
+<td>CreditLimit:</td>
+<td><span title="CreditLimit">100000</span></td>
+</tr>
+<tr>
+<td>DiscountCode:</td>
+<td> N 
+
+<a href="#" onclick="return false">Show</a> <a href="#" onclick="return false">Edit</a> <a href="#" onclick="return false">Destroy</a> )</td>
+</tr>
+<tr>
+<td>PurchaseOrderCollection:</td>
+<td><table border="0" cellpadding="2" cellspacing="0" rules="all" style="border:solid 1px">
+<thead>
+<tr>
+<th scope="col">OrderNum</th>
+<th scope="col">Quantity</th>
+<th scope="col">ShippingCost</th>
+<th scope="col">SalesDate</th>
+<th scope="col">ShippingDate</th>
+<th scope="col">FreightCompany</th>
+<th scope="col">CustomerId</th>
+<th scope="col">ProductId</th>
+<th scope="col">&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="jsfcrud_odd_row">
+<td> 10398001</td>
+<td> 10</td>
+<td> 449.00</td>
+<td>05/24/2011</td>
+<td>05/24/2011</td>
+<td> Poney Express</td>
+<td> 1</td>
+<td> 980001</td>
+<td><a href="#" onclick="return false">Show</a> <a href="#" onclick="return false">Edit</a> <a href="#" onclick="return false">Destroy</a></td>
+</tr>
+<tr class="jsfcrud_even_row">
+<td> 10398005</td>
+<td> 100</td>
+<td> 459.00</td>
+<td>05/24/2011</td>
+<td>05/24/2011</td>
+<td> Poney Express</td>
+<td> 1</td>
+<td> 980032</td>
+<td><a href="#" onclick="return false">Show</a> <a href="#" onclick="return false">Edit</a> <a href="#" onclick="return false">Destroy</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+
+                
+                <br />
+                <a href="#" onclick="return false">Destroy</a>
+                <br />
+                <br />
+                <a href="#" onclick="return false">Edit</a>
+                <br />
+                <a href="#" onclick="return false">New Customer</a>
+                <br />
+                <a href="#" onclick="return false">Show All Customer Items</a>
+                <br />
+                <a href="#" onclick="return false">Index</a>
+</form>
+</div>
+        </body>
+</html>
